@@ -1,0 +1,57 @@
+
+.add-up{
+    display: flex;
+}
+.addproductForm{
+    margin-top: 20px;
+    width: 50%;
+}
+.addup-pic{
+    margin-top: 20px;
+    width: 40%;
+}
+
+.input{
+    margin-bottom: 20px;
+    justify-self: center;
+    margin-top: 30px;
+}
+.label{
+    display: block;
+    color: rgb(27, 6, 6);
+    font-family: dancing script;
+    font-size: 24px;
+}
+.inpt-tag{
+    width: 70%;
+    border-bottom: 2px solid rgb(27, 6, 6);
+    outline: none;
+    background: transparent;
+    /* border: none; */
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    color: rgb(27, 6, 6);
+    font-size: 16px;
+    font-weight: 800;
+}
+.inpt-tagA{
+    width: 70%;
+    border-bottom: 2px solid rgb(27, 6, 6);
+    border-right: 2px solid rgb(27, 6, 6);
+    outline: none;
+    background: transparent;
+    resize: none;
+    border-top: none;
+    border-left: none;
+    color: rgb(27, 6, 6);
+    font-size: 12px;
+    font-weight: 200;
+}
+
+@media screen and (max-width:660px) {
+    .add-up{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+}
