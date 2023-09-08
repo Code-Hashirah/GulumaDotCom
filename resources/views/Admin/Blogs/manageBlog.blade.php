@@ -32,7 +32,10 @@
                 <td>{{$blog->title}}</td>
                 <td><p id="bdy">{{$blog->body}}</p></td>
                 <td><img src="{{$blog->picture}}" alt="picture" width="200px" height="150px"></td>
-                <td> 
+                <td>
+                        <p>{{$blog->author}}</p>
+                    </td>
+                <td>   
                 <form action="/admin/delete-blog" method="post">
                     @csrf
                     @method('delete')

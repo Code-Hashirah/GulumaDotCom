@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit blog</title>
-    @extends ('layouts.app')
+    @extends ('layouts.admin.app')
     @section('form') 
     @if (session('success'))
 <h2>Update Blog</h2>
@@ -34,7 +34,7 @@
                 </div>
                 <div class="input">
                     <label class="label" for="">Author</label>
-                    <input  class="inpt-tag" name="Author" value="{{$blog->author}" type="text" >
+                    <input  class="inpt-tag" name="Author" value="{{$blog->author}}" type="text" >
                 </div>
               
                 <div class="input">

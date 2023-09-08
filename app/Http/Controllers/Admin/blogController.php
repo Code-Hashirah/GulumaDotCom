@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
@@ -32,15 +31,18 @@ class blogController extends Controller
         return view('Admin.Blogs.manageBlog',compact(['Blogs']));
     }
     function edit($id){
-        $blog=new blogs($id);
+        $blog=blogs::find($id);
+        return view('Admin.Blogs.editBlog',compact('blog'));
     }
 
     function update(Request $request){
         blogs::where('id',$request->id)->update(['title'=>$request->Title, 'body'=>$request->Body, 'picture'=>$request->Picture, 'author'=>$request->Author]);
+    return redirect('/admin/manage-blogs')->with('success','Update made');
     }
 
     function delete(Request $request){
-        blogs::where('id', $request->id)->delete();
+        blogs::where('id', $request->Id)->delete();
+        return redirect('/admin/manage-blogs');
     }
     
 }
